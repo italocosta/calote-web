@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/olamundo")
-public class MinhaPrimeiraServlet extends HttpServlet{
+@WebServlet("/contador")
+public class ServletContador extends HttpServlet {
 	
-	@Override
+	private int cont = 0;
+	
 	protected void service(HttpServletRequest req, HttpServletResponse res)
-			throws ServletException, IOException {
-		PrintWriter escreva = res.getWriter();
-		escreva.println("<html>");
-		escreva.println("<body>");
-		escreva.println("Ebaa, meu primeiro servlet !");
-		escreva.println("</body>");
-		escreva.println("</html>");
-		
+		throws ServletException, IOException{
+		cont ++;
+		PrintWriter print = res.getWriter();
+		print.println("<html>");
+		print.println("<body>");
+		print.println("Servlet de numero : "+cont);
+		print.println("</body>");
+		print.println("</html>");
 	}
-	
 
 }
