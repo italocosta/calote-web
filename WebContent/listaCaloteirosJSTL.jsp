@@ -11,7 +11,7 @@
 					<td>${id.count }</td>
 					
 					<c:choose>
-						<c:when test="${not empty c.email }">
+						<c:when test="${not empty c.nome }">
 							<td>${c.nome }</td>
 						</c:when>
 						<c:otherwise>
