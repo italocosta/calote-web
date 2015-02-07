@@ -1,10 +1,18 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:useBean id="dao" class="br.triadworks.javaweb.dao.CaloteiroDAO" />
+<%@ include file="/includes.jsp" %>
 
 <html>
 	<title>Lista de Caloteiros</title>
 	<body>
+		<c:import url="cabecalho.jsp"/>
 		<table border="1">
+			<tr bgcolor="#888">
+				<td>ID</td>
+				<td>Nome</td>
+				<td>Email</td>
+				<td>Divida</td>
+				<td>Data divida</td>
+			</tr>
 			<c:forEach var="c" items="${dao.lista }" varStatus="id">
 				<tr bgcolor="#${id.count % 2 == 0 ? 'ff0000':'ffffff' }">
 				
@@ -39,7 +47,9 @@
 					
 					<c:choose>
 						<c:when test="${not empty c.dataDivida }">
-							<td>${c.dataDivida.time }</td>
+							<td>
+								<fmt:formatDate value="${c.dataDivida.time }" pattern="dd/MM/yyyy"/>
+							</td>
 						</c:when>
 						<c:otherwise>
 							<td>Data da dívida não informada</td>
@@ -50,5 +60,6 @@
 				</tr>
 			</c:forEach>
 		</table>
+		<c:import url="rodape.jsp"/>
 	</body>
 </html>

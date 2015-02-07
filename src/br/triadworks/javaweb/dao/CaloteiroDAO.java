@@ -55,8 +55,11 @@ public class CaloteiroDAO {
 				caloteiro.setEmail(rs.getString("email"));
 				caloteiro.setDevendo(rs.getInt("devendo"));
 				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("dataDivida"));
-				caloteiro.setDataDivida(calendar);
+				if( rs.getDate("dataDivida") != null){
+				 calendar.setTime(rs.getDate("dataDivida"));
+				 caloteiro.setDataDivida(calendar);
+				}
+				
 				
 				lista.add(caloteiro);
 			}
