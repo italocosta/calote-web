@@ -5,7 +5,8 @@
 	</head>
 	<body>
 		<c:import url="cabecalho.jsp"></c:import>
-		<form action="adicionaCaloteiro" method="post">
+		<form action="sistema" method="post">
+			<input type="hidden" value="AdicionaCaloteiro" name="acao">
 			<pog:formulario id="labelNome" campoName="nome" label="Nome: "/>
 			<pog:formulario id="labelEmail" campoName="email" label="Email: "/>
 			<pog:formulario id="labelDevendo" campoName="devendo" label="Devendo: "/>
