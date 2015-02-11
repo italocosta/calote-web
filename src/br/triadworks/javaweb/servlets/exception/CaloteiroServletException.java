@@ -4,6 +4,8 @@ import javax.servlet.ServletException;
 
 public class CaloteiroServletException extends ServletException {
 	
-	
+	public CaloteiroServletException(String ex){
+		super(ex);
+	}
 
 }

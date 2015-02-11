@@ -63,6 +63,9 @@
 						
 					</tr>
 				</c:forEach>
+				<tr>
+					<img src="imagens/alt.png"/>
+				</tr>
 			</table>
 		</c:if>
 		<c:if test="${empty lista}">

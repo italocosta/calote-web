@@ -14,8 +14,8 @@ import br.triadworks.javaweb.modelo.Caloteiro;
 public class CaloteiroDAO {
 	private Connection connection;
 	
-	public CaloteiroDAO(){
-		this.connection = new ConnectionFactory().getConnection();
+	public CaloteiroDAO(Connection con){
+		this.connection = con;
 	}
 	
 	public void adiciona(Caloteiro caloteiro){
