@@ -1,4 +1,4 @@
-package br.triadworks.javaweb.servlets;
+/*package br.triadworks.javaweb.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -47,14 +47,15 @@ public class AdicionaCaloteiro extends HttpServlet {
 		RequestDispatcher rd = req.getRequestDispatcher("/caloteiro-adicionado.jsp");
 		rd.forward(req, res);
 		
-		/*PrintWriter print = res.getWriter();
+		PrintWriter print = res.getWriter();
 		print.println("<html>");
 		print.println("<body>");
 		print.println("Caloteiro "+caloteiro.getNome() + " adicionado com sucesso !!");
 		print.println("</body>");
-		print.println("</html>");*/
+		print.println("</html>");
 		
 		
 	}
 
 }
+*/

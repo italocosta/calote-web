@@ -1,4 +1,4 @@
-package br.triadworks.javaweb.servlets;
+/*package br.triadworks.javaweb.servlets;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,11 +22,12 @@ public class ListaCaloteiros extends HttpServlet {
 		
 		CaloteiroDAO dao = new CaloteiroDAO();
 		List<Caloteiro> lista = dao.getLista();
-		/*print.println("<html>");
+		print.println("<html>");
 		print.println("<body>");
 		print.println("Servlet de numero : "+cont);
 		print.println("</body>");
-		print.println("</html>");*/
+		print.println("</html>");
 		
 	}
 }
+*/

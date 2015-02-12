@@ -5,6 +5,9 @@
 	</head>
 	<body>
 		<c:import url="cabecalho.jsp"></c:import>
+		<hr>
+			Usuário logado : ${user.nome }
+		<hr>
 		<form action="sistema" method="post">
 			<input type="hidden" value="AdicionaCaloteiro" name="acao">
 			<div>

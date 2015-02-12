@@ -16,6 +16,8 @@
 					<td>Email</td>
 					<td>Divida</td>
 					<td>Data divida</td>
+					<td>Altera</td>
+					<td>Exclui</td>
 				</tr>
 				<c:forEach var="c" items="${lista }" varStatus="id">
 					<tr bgcolor="#${id.count % 2 == 0 ? 'ff0000':'ffffff' }">
@@ -59,13 +61,15 @@
 								<td>Data da dívida não informada</td>
 							</c:otherwise>
 						</c:choose>
-						
+						<td>
+							<img src="imagens/alt.png"/>
+						</td>
+						<td>
+							<img src="imagens/del.png"/>
+						</td>
 						
 					</tr>
 				</c:forEach>
-				<tr>
-					<img src="imagens/alt.png"/>
-				</tr>
 			</table>
 		</c:if>
 		<c:if test="${empty lista}">
