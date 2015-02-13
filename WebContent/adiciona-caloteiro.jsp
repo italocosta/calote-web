@@ -5,6 +5,7 @@
 	</head>
 	<body>
 		<c:import url="cabecalho.jsp"></c:import>
+		<c:import url="menu_horizontal.html"/>
 		<hr>
 			Usuário logado : ${user.nome }
 		<hr>

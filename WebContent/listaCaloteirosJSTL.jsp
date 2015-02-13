@@ -5,6 +5,7 @@
 	<title>Lista de Caloteiros</title>
 	<body>
 		<c:import url="cabecalho.jsp"/>
+		<c:import url="menu_horizontal.html"/>
 		<form action="adiciona-caloteiro.jsp" method="post">
 			<input type="submit" value="cadastrar">
 		</form>

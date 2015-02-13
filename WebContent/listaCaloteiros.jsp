@@ -5,7 +5,7 @@
 	<title>Lista de Caloteiros</title>
 	<body>
 		<%
-			CaloteiroDAO dao = new CaloteiroDAO();
+			CaloteiroDAO dao = new CaloteiroDAO(null);
 			List<Caloteiro> lista = dao.getLista();
 			for(Caloteiro c : lista){
 				%>

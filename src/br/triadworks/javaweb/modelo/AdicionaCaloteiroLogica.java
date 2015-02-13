@@ -37,7 +37,6 @@ public class AdicionaCaloteiroLogica implements Logica{
 		CaloteiroDAO dao = new CaloteiroDAO(con);
 		dao.adiciona(caloteiro);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("/sistema?acao=ListaCaloteiro");
-		rd.forward(req, res);
+		res.sendRedirect("sistema?acao=ListaCaloteiro");
 	}
 }

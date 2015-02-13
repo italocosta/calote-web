@@ -22,16 +22,17 @@ public class AutenticaUsuarioLogica implements Logica {
 		UsuarioDAO dao = new UsuarioDAO(conn);
 		
 		Usuario user = dao.autentica(login, senha);
-		RequestDispatcher rd;
+		
 		if(user != null){
 			session.setAttribute("user", user);
-			rd = req.getRequestDispatcher("menu.jsp");
+			req.setAttribute("nome", "RequestScope");
+			session.setAttribute("nome", "sessionScope");
+			res.sendRedirect("menu.jsp");
 		}else{
 			req.setAttribute("msg", "Login e/ou senha incorreto.");
-			rd = req.getRequestDispatcher("login.jsp");
+			res.sendRedirect("login.jsp");
 			
 		}
-		rd.forward(req, res);
 		
 
 	}
